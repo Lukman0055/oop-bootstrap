@@ -29,10 +29,10 @@ $siswa = new Biodata();
             $agama = $data['agama'];
         }
     ?>
-    <fieldset>
+    <!-- <fieldset> -->
         <!-- <legend>Show Data Siswa</legend> -->
         <table>
-            <tr>
+            <!-- <tr>
                 <th>Nama Siswa</th>
                 <td><input type="text" name="nama" value="<?php echo $nama; ?>" readonly></td>
             </tr>
@@ -59,11 +59,43 @@ $siswa = new Biodata();
             <tr>
                 <th>Agama</th>
                 <td><input type="text" name="agm" value="<?php echo $agama; ?>" readonly></td>
-            </trtr>
+            </tr> -->
+                    <label for="">Nama</label>
+                    <input type="text" name="nama" value="<?php echo $nama; ?>" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                    <label for="">Alamat</label>
+                    <textarea name="alm" class="form-control" rows="5" readonly><?php echo $alamat; ?></textarea>
+                    <div class="form-group">
+                    <label for="">Tanggal Lahir</label>
+                    <input type="date" name="tgl" class="form-control" value="<?php echo $tgl_lahir; ?>" readonly>
+                    </div>
+                    <div class="form-group">
+                    <label for"">Jenis Kelamin</label><br>
+                    <?php
+                    if ($data['jns_kelamin']== "Laki-laki") {
+                    ?>
+                    <label><input type="radio" name="jk" id="inlineRadio1" value="Laki-laki" checked>
+                    <label class="form-check-label" for="inlineRadio1">Laki-Laki</label></<label>
+                    <?php }else {  ?>
+                    <label><input type="radio" name="jk" id="inlineRadio2" value="Perempuan" checked>
+                    <label class="form-check-label" for="inlineRadio2">Perempuan</label></label>
+                    <?php } ?>    
+                    </div>
+                    <div class="form-group">
+                    <label>Agama</label><br>
+                    <label><input type="text" name="agm" value="<?php echo $agama; ?>" readonly></label>
+                    </div>
             <tr>
-                <td><a href="index.php?id=<?php echo $data['id']; ?>&aksi=show">KEMBALI  </a></td>
+                <td><a class="btn btn-primary" href="index.php?id=<?php echo $data['id']; ?>&aksi=show">KEMBALI  </a></td>
             </tr>
         </table>
-    </fieldset>
+    <!-- </fieldset>
+     -->                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 </body>
 </html>

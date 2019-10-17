@@ -32,7 +32,7 @@ class Biodata extends Database {
     // mengupdate data berdasarkan id
     public function update($id, $nama, $alamat, $tgl_lahir, $jns_kelamin, $agama, $umur)
     {
-        mysqli_query($this->koneksi,"update biodata set nama='$nama', alamat='$alamat', tgl_lahir='$tgl_lahir',
+        mysqli_query($this->koneksi,"update biodata set nama='$nama', alamat='$alamat',  tgl_lahir='$tgl_lahir',
         jns_kelamin='$jns_kelamin', agama='$agama', umur='$umur' where id='$id'");
     }
 

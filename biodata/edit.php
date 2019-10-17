@@ -50,10 +50,18 @@ $siswa = new Biodata();
                     <div class="form-group">
                     <label for="">Agama</label>
                     <select class="form-control" value="<?php echo $agama; ?>" name="agm">
-                    <option>ISLAM</option>
-                    <option>KRISTEN</option>
-                    <option>BUDHA</option>
-                    <option>HINDU</option>
+                    <option <?php if ($data['agama']=="ISLAM") {?>
+                            selected
+                            <?php } ?>>ISLAM</option>
+                    <option <?php if ($data['agama']=="KRISTEN") {?>
+                            selected
+                            <?php } ?>>KRISTEN</option>
+                    <option <?php if ($data['agama']=="BUDHA") {?>
+                            selected
+                            <?php } ?>>BUDHA</option>
+                    <option <?php if ($data['agama']=="HINDU") {?>
+                            selected
+                            <?php } ?>>HINDU</option>
                     </select>
                     </div>
                     <button type="submit" name="prs" class="btn btn-outline-primary">Proses</button>
